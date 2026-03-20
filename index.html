@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Weather App</h1>
+        <div class="tab_container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p> 
+            <!-- <button class="tab" data-userWeather>Your Weather</button>
+            <button class="tab" data-searchWeather>Search Weather</button> -->
+        </div>
+        <div class="weather-container">
+            <div class="sub-container grant-location-container">
+                <img src="./image_weather/location.png" width="60" height="60" loading="lazy">
+               <p>Grant Location Access</p>
+               <p>Allow Access to get Weather Information</p>
+               <button class="btn" data-grantAccess>Grant   Access</button>
+            </div>
+            <!-- search-form -->
+            <form class="search-form" data-search-form>
+                <input placeholder="Search for city" data-searchInput>
+                <button class="btn" type="submit">
+                    <img src="./image_weather/search.png" height="24" width="24" loading="lazy">
+                </button>
+                
+            </form>
+            <!--if city is not found-->
+            <div class="error_found">
+                <img src="./image_weather/not-found.png" height="250" width="250">
+                <p>City Not Found...</p>
+            </div>
+
+            <!-- loading screen container -->
+             <div class="loading-container" >
+                <img src="./image_weather/Loading_image.gif" width="150" height="150">
+                <p>Loading...</p>  
+             </div>
+
+             <!--Show weather information page UI-->
+             <div class="sun-container user-info-container">
+                <!--city name and flag-->
+                <div class="name" >
+                    <p data-cityName></p>
+                    <img class="flag" data-countryIcon>
+                </div>
+                <!--location weather description-->
+                <p data-wratherDesc></p>
+                <!--based on the temparature the image will be -->
+                <img data-Weather-icon>
+
+                <!--temparature show-->
+                <p data-temp></p>
+                
+                <!--3 card parameters-->
+                <div class="Parameter-container">
+                    <div class="Parameter">
+                        <img src="./image_weather/wind.png" width="30" height="30" loading="lazy">
+                        <p>WINDSPEED</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <div class="Parameter">
+                        <img src="./image_weather/humidity.png" width="30" height="30" loading="lazy">
+                        <p>HUMIDITY</p>
+                        <p data-humidity></p>
+                    </div>
+                    <div class="Parameter">
+                        <img src="./image_weather/cloud.png" width="30" height="30" loading="lazy">
+                     
+                        <p>CLOUD</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+             </div>
+            <!--5 days Forcast Button-->
+            <div class="forcast-button">
+                <button class="btn" day-forcast>5  Day  Forcast</button>
+            </div>
+            <div class="forecast-table-container">
+                <table id="forecastTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Weather</th>
+                            <th>Temp (°C)</th>
+                            <th>Wind (m/s)</th>
+                            <th>Humidity (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            
+           
+        </div>
+    </div>
+
+
+
+
+    <!-- hello nilanjana -->
+    <script src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</body>
+</html>
